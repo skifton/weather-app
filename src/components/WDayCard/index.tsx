@@ -15,11 +15,11 @@ const WDayCard: React.FC<IProps> = ({
   nightTemperature,
 }) => {
   return (
-    <div className="bg-white rounded-xl p-5 px-8 w-fit text-center">
+    <div className="bg-white rounded-xl p-5 px-8 min-w-full  text-center">
       <Fragment>
         <p className="font-bold">{day}</p>
         <img
-          className="mt-4 h-18 w-18 flex justify-center"
+          className="mt-4 h-18 w-18 mx-auto"
           src={icon}
           alt={altText}
         />
