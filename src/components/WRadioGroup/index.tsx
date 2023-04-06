@@ -20,12 +20,11 @@ const WRadioGroup: React.FC<IProps> = ({
           <RadioGroup.Option
             key={unit.value}
             value={unit}
-            className={({ active, checked }) =>
-              clsx(
+            className={({ checked }) =>
+               clsx(
                 "relative -m-0.5 flex cursor-pointer items-center justify-center rounded-full p-0.5 focus:outline-none",
                 {
-                  "bg-gray-500": active && checked,
-                  "": !active && checked,
+                  "bg-black text-white":  checked,
                 }
               )
             }

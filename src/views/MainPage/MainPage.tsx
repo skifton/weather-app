@@ -32,7 +32,7 @@ const MainPage: React.FC = () => {
   const [weekWeather, setWeekWeather] = useState<IWeekWeather[]>();
   const [currentCity, setCurrentCity] = useState<ILocation>();
   const [currentWeather, setCurrentWeather] = useState<ICurrentWeather>();
-  const [inputQuery, setInputQuery] = useState<string>("");
+  const [inputQuery, setInputQuery] = useState<string>("Minsk");
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -53,7 +53,6 @@ const MainPage: React.FC = () => {
   }, [currentCity]);
 
   const onChangeCurrentCityHandler = useCallback((data: any) => {
-    console.log(data);
     setCurrentCity(data);
   }, []);
 
@@ -110,7 +109,7 @@ const MainPage: React.FC = () => {
           <hr className="mx-20 mt-10" />
           <div className="flex mx-20 mt-5">
             <MapPinIcon className="w-8 h-8 mr-4" />
-            <p className="text-gray-500 self-center">{currentCity?.name}</p>
+            <p className="text-gray-500 self-center">{currentCity?.name || "Minsk"}</p>
           </div>
           <div className="flex mx-20 mt-5">
             <CloudIcon className="w-8 h-8 mr-4" />
