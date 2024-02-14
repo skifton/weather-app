@@ -1,6 +1,6 @@
 import axios from "axios";
 const baseUrl = "http://api.weatherapi.com/v1/";
-const api = "YOUR API";
+const api = "d2e2183343864517aa463956231103";
 
 export const getWeekWeather = async (location: string) => {
   return axios
